@@ -8,7 +8,7 @@ import { messageRoute } from './routes/message.route';
 import cors from 'cors';
 import fileUpload from 'express-fileupload';
 import { app, server } from './lib/socketio';
-
+import 'dotenv/config';
 
 app.use(express.json());
 app.use(fileUpload({
@@ -36,3 +36,4 @@ server.listen(port,()=>{
   console.log(`Server is running on port ${port}`);
   connectdb()
 });
+
